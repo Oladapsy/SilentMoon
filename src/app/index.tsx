@@ -1,16 +1,17 @@
 import { Text, View, StyleSheet } from "react-native";
-// import { Link } from "expo-router";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Link } from "expo-router";
+// import { Logo } from "@/src/components/common/Logo";
 
 export default function WelcomeScreen() {
   return (
-    <SafeAreaView>
-      <View
-        style={styles.container}
-      >
-        <Text>Home text</Text>
+      <View style={styles.container}>
+        {/* <Logo /> */}
+        <Text style={styles.text}>Welcome to Silent Moon</Text>
+        <Text style={styles.text}>Welcome to Silent Moon</Text>
+        <Link href="/sign-in">
+          <Text style={styles.text}>Go to Sign In</Text>
+        </Link>
       </View>
-    </SafeAreaView>
   );
 }
 
@@ -19,5 +20,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "red",
+  },
+  text: {
+      color: "black",
+      fontSize: 30,
   }
 });

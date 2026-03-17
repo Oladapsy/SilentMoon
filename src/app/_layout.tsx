@@ -1,10 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
-import * as SplashScreen from "expo-splash-screen";
-
-// Keep the splash screen visible while we fetch resources
-SplashScreen.preventAutoHideAsync();
+import { Text } from "react-native";
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -35,15 +32,9 @@ export default function RootLayout() {
     "HelveticaNeue-UltraLightItalic": require("@/assets/fonts/helvetica-neue-5/HelveticaNeueUltraLightItalic.otf"),
   });
 
-  // Hide the splash screen once fonts are loaded
-  useEffect(() => {
-    if (fontsLoaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
 
   if (!fontsLoaded) {
-    return null; // or a custom loading component
+    return <Text>Loading fonts…</Text>;
   }
 
   return <Stack />;
