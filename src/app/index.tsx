@@ -1,29 +1,37 @@
-import { Text, View, StyleSheet } from "react-native";
-import { Link } from "expo-router";
-// import { Logo } from "@/src/components/common/Logo";
+import { View, StyleSheet } from "react-native";
+import MySafeAreaView from "../components/common/MySafeAreaView";
+import Hero from "@/src/components/common/home/Hero";
+import { colors } from "@/src/theme/colors";
+import HomeText from "@/src/components/common/home/HomeText";
+import MainButton from "@/src/components/common/MainButton";
+import ActionText from "@/src/components/common/ActionText";
+import BottomDash from "../components/common/BottomDash";
 
 export default function WelcomeScreen() {
   return (
+    <MySafeAreaView color={colors.layer}>
       <View style={styles.container}>
-        {/* <Logo /> */}
-        <Text style={styles.text}>Welcome to Silent Moon</Text>
-        <Text style={styles.text}>Welcome to Silent Moon</Text>
-        <Link href="/sign-in">
-          <Text style={styles.text}>Go to Sign In</Text>
-        </Link>
+        <Hero />
+        <HomeText
+          title="We are what we do"
+          description="Thousand of people are usign silent moon for smalls meditation "
+        />
+
+        <MainButton text="SIGN UP" onPress={() => {}} />
+        <ActionText main="ALREADY HAVE AN ACCOUNT?" sub="LOG IN" />
+        <BottomDash />
       </View>
+    </MySafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "red",
+    backgroundColor: "white",
   },
   text: {
-      color: "black",
-      fontSize: 30,
-  }
+    color: "red",
+  },
 });

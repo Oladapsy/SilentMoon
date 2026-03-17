@@ -37,5 +37,8 @@ export default function RootLayout() {
     return <Text>Loading fonts…</Text>;
   }
 
-  return <Stack />;
+  return <Stack>
+    <Stack.Screen name="index" options={{ headerShown: false }} />
+    <Stack.Screen name="sign-in" options={{ headerShown: false }} />
+  </Stack>;
 }
