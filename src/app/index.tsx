@@ -17,8 +17,8 @@ export default function WelcomeScreen() {
           description="Thousand of people are usign silent moon for smalls meditation "
         />
 
-        <MainButton text="SIGN UP" onPress={() => {}} />
-        <ActionText main="ALREADY HAVE AN ACCOUNT?" sub="LOG IN" />
+        <MainButton text="SIGN UP" route='/sign-up' />
+        <ActionText main="ALREADY HAVE AN ACCOUNT?" sub="LOG IN" route='/sign-in'/>
         <BottomDash />
       </View>
     </MySafeAreaView>
@@ -30,8 +30,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     backgroundColor: "white",
-  },
-  text: {
-    color: "red",
   },
 });

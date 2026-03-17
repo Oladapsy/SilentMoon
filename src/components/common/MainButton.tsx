@@ -9,13 +9,15 @@ import {
   TextStyle,
 } from "react-native";
 import { colors } from "@/src/theme/colors";
+import { Href, useRouter } from "expo-router";
 
 interface MainButtonProps extends TouchableOpacityProps {
-  onPress: () => void;
+  onPress?: () => void;
   text: string;
   icon?: React.ReactNode;
   color?: string;
   textStyle?: StyleProp<TextStyle>;
+  route?: Href;
 }
 
 const MainButton = ({
@@ -24,12 +26,24 @@ const MainButton = ({
   icon,
   color = colors.tetiary,
   textStyle,
+  route,
   ...rest
 }: MainButtonProps) => {
+
+  const router = useRouter();
+  
+  const handlePress = () => {
+    if (route) {
+      router.push(route);        // navigate to route if provided
+    } else if (onPress) {
+      onPress();                 // otherwise run custom onPress
+    }
+  };
+
   return (
     <TouchableOpacity
       style={[styles.button, { backgroundColor: color }]}
-      onPress={onPress}
+      onPress={handlePress}
       {...rest}
     >
       {icon && <View style={styles.icon}>{icon}</View>}
