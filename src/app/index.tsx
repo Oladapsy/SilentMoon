@@ -11,15 +11,27 @@ export default function WelcomeScreen() {
   return (
     <MySafeAreaView color={colors.layer}>
       <View style={styles.container}>
-        <Hero />
-        <HomeText
-          title="We are what we do"
-          description="Thousand of people are usign silent moon for smalls meditation "
-        />
+        <View style={styles.heroWrapper}>
+          <Hero />
+        </View>
 
-        <MainButton text="SIGN UP" route='/sign-up' />
-        <ActionText main="ALREADY HAVE AN ACCOUNT?" sub="LOG IN" route='/sign-in'/>
-        <BottomDash />
+        <View style={styles.content}>
+          <View style={styles.homeTextWrapper}>
+            <HomeText
+              title="We are what we do"
+              description="Thousand of people are usign silent moon for smalls meditation "
+            />
+          </View>
+
+          <MainButton text="SIGN UP" route="/sign-up" />
+          <ActionText
+            main="ALREADY HAVE AN ACCOUNT?"
+            sub="LOG IN"
+            route="/sign-in"
+          />
+        </View>
+
+          <BottomDash />
       </View>
     </MySafeAreaView>
   );
@@ -31,4 +43,21 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
   },
+  content: {
+    flex: 1, // takes remaining space between Hero and BottomDash
+    alignItems: "center",
+    justifyContent: "center", // centers text + button in the white area
+    width: "100%",
+    paddingHorizontal: 10,
+  },
+  heroWrapper: {
+    width: "100%",
+    marginTop: -60,
+  },
+  homeTextWrapper: {
+    marginVertical: 45,
+  },
+  dashWrapper: {
+    paddingBottom: 0,
+  }
 });

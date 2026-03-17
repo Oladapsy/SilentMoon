@@ -8,9 +8,8 @@ import HomeRelax from "@/assets/svg/HomeRelax.svg";
 export default function Hero() {
   return (
     <View style={styles.container}>
-      <View style={{ width: "100%", height: 200 }}></View>
+     
       <HeroBackground style={styles.background} />
-
       <View style={styles.logoWrapper}>
         <Logo />
       </View>
@@ -28,7 +27,7 @@ const styles = StyleSheet.create({
   container: {
     position: "relative",
     width: "100%",
-    height: "60%",
+    height: 420,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -41,12 +40,12 @@ const styles = StyleSheet.create({
   },
   logoWrapper: {
     position: "absolute",
-    top: 10,
+    top: 50,
     alignSelf: "center",
   },
   imageWrapper: {
     position: "absolute",
-    top: 100,
+    top: 160,
     alignSelf: "center",
   },
   baseLine: {
