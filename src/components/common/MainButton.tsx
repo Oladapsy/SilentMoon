@@ -61,7 +61,7 @@ const MainButton = ({
 
 const styles = StyleSheet.create({
   button: {
-    width: "90%",
+    width: "100%",
     borderRadius: 38,
     paddingVertical: 20,
     paddingHorizontal: 20,

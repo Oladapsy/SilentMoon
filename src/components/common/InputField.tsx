@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   inputWrapper: {
     flexDirection: "row",
     alignItems: "center",
-    borderWidth: 1,
+    borderWidth: 0.15,
     borderColor: colors.secondary,
     borderRadius: 15,
     paddingHorizontal: 12,

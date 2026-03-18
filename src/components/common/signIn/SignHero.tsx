@@ -59,6 +59,6 @@ const styles = StyleSheet.create({
   headNav: {
     alignSelf: "flex-start",
     marginTop: 20,
-    marginLeft: 20,
+    marginLeft: 0,
   },
 });

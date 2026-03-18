@@ -5,8 +5,7 @@ import { colors } from "@/src/theme/colors";
 import HomeText from "@/src/components/common/home/HomeText";
 import MainButton from "@/src/components/common/MainButton";
 import ActionText from "@/src/components/common/ActionText";
-import BottomDash from "@/src/components/common/BottomDash";
-
+import DashLine from "@/src/components/common/BottomDash";
 
 export default function WelcomeScreen() {
   return (
@@ -24,7 +23,9 @@ export default function WelcomeScreen() {
             />
           </View>
 
-          <MainButton text="SIGN UP" route="/sign-up" />
+          <View style={styles.mainButton}>
+            <MainButton text="SIGN UP" route="/sign-up" />
+          </View>
           <ActionText
             main="ALREADY HAVE AN ACCOUNT?"
             sub="LOG IN"
@@ -32,7 +33,7 @@ export default function WelcomeScreen() {
           />
         </View>
 
-          <BottomDash />
+        <DashLine />
       </View>
     </MySafeAreaView>
   );
@@ -60,5 +61,8 @@ const styles = StyleSheet.create({
   },
   dashWrapper: {
     paddingBottom: 0,
+  },
+  mainButton: {
+    marginHorizontal: 12,
   }
 });
