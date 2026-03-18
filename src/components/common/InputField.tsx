@@ -1,16 +1,24 @@
-import React, { useState } from "react";
-import { View, TextInput, StyleSheet, TouchableOpacity, Text } from "react-native";
-import { Controller } from "react-hook-form";
-import EyeIcon from "@/assets/svg/signup/eyeClose.svg";
+import React, { useState } from "react"; // to toggle password visibility
+import {
+  View,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+} from "react-native";
+import { Controller } from "react-hook-form"; // connect custom input to rhf
+import EyeClose from "@/assets/svg/signup/eyeClose.svg";
+import EyeOpen from "@/assets/svg/signup/eyeOpen.svg";
 import CheckIcon from "@/assets/svg/signup/check.svg";
+import { colors } from "@/src/theme/colors";
 
 interface InputFieldProps {
-  control: any;
-  name: string;
-  placeholder: string;
-  secureTextEntry?: boolean;
-  showToggle?: boolean;
-  showCheck?: boolean;
+  control: any; // from react hook form
+  name: string; // field name
+  placeholder: string; // the input placeholder
+  secureTextEntry?: boolean; // hide text passwordMode
+  showToggle?: boolean; // show the check icon
+  showCheck?: boolean; // show the eyeIcon
 }
 
 export default function InputField({
@@ -21,14 +29,24 @@ export default function InputField({
   showToggle = false,
   showCheck = false,
 }: InputFieldProps) {
+  // state for managing hidden text
   const [hidden, setHidden] = useState(secureTextEntry);
+
+  //Variable	Meaning
+  // onChange	-> updates value
+  // onBlur	-> when user leaves input
+  // value -> current input value
+  // error -> validation error
 
   return (
     <Controller
       control={control}
       name={name}
       rules={{ required: `${placeholder} is required` }}
-      render={({ field: { onChange, onBlur, value }, fieldState: { error } }) => (
+      render={({
+        field: { onChange, onBlur, value },
+        fieldState: { error },
+      }) => (
         <View style={styles.wrapper}>
           <View style={[styles.inputWrapper, error && styles.errorBorder]}>
             <TextInput
@@ -40,8 +58,11 @@ export default function InputField({
               secureTextEntry={hidden}
             />
             {showToggle && (
-              <TouchableOpacity onPress={() => setHidden(!hidden)} style={styles.icon}>
-                <EyeIcon />
+              <TouchableOpacity
+                onPress={() => setHidden(!hidden)}
+                style={styles.icon}
+              >
+                {hidden ? <EyeClose /> : <EyeOpen />}
               </TouchableOpacity>
             )}
             {showCheck && value?.length > 0 && (
@@ -65,21 +86,24 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#ccc",
-    borderRadius: 12,
+    borderColor: colors.secondary,
+    borderRadius: 15,
     paddingHorizontal: 12,
+    backgroundColor: colors.textInput,
   },
   input: {
     flex: 1,
-    paddingVertical: 14,
-    fontSize: 14,
+    height: 56,
+    fontSize: 16,
+    color: colors.secondary,
+    backgroundColor: colors.textInput,
   },
   errorBorder: {
-    borderColor: "red",
+    borderColor: colors.error,
   },
   errorText: {
-    color: "red",
-    fontSize: 12,
+    color: colors.error,
+    fontSize: 13,
     marginTop: 4,
   },
   icon: {

@@ -11,4 +11,6 @@ export const colors = {
   line: "#E6E6E6",
   navBorder: '#EBEAEC',
   nav23Border: '#E6E7F2',
+  textInput: '#F2F3F7',
+  error: '#ED4337',
 };
