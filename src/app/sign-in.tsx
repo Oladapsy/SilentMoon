@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   fpassword: {
-    marginBottom: 65,
+    marginBottom: 75,
     marginTop: 10,
   },
   actionText: {

@@ -65,7 +65,7 @@ export default function InputField({
                 {hidden ? <EyeClose /> : <EyeOpen />}
               </TouchableOpacity>
             )}
-            {showCheck && value?.length > 0 && (
+            {showCheck && value?.length > 6 && (
               <View style={styles.icon}>
                 <CheckIcon />
               </View>
@@ -80,7 +80,7 @@ export default function InputField({
 
 const styles = StyleSheet.create({
   wrapper: {
-    marginBottom: 16,
+    marginBottom: 12,
   },
   inputWrapper: {
     flexDirection: "row",
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   errorText: {
     color: colors.error,
     fontSize: 13,
-    marginTop: 4,
+    marginTop: 2,
   },
   icon: {
     marginLeft: 8,
