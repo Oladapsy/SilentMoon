@@ -13,7 +13,7 @@ import SignInbg4 from "@/assets/svg/signin/signInBg4.svg";
 interface Props {
   text?: string;
 }
-const SignupHero = ({ text = "Welcome Back!" }: Props) => {
+const SignHero = ({ text = "Welcome Back!" }: Props) => {
   return (
     <View style={styles.container}>
       {/* Background svgs */}
@@ -37,7 +37,7 @@ const SignupHero = ({ text = "Welcome Back!" }: Props) => {
   );
 };
 
-export default SignupHero;
+export default SignHero;
 
 const styles = StyleSheet.create({
   container: {
