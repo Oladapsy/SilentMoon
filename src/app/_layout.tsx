@@ -32,13 +32,15 @@ export default function RootLayout() {
     "HelveticaNeue-UltraLightItalic": require("@/assets/fonts/helvetica-neue-5/HelveticaNeueUltraLightItalic.otf"),
   });
 
-
   if (!fontsLoaded) {
     return <Text>Loading fonts…</Text>;
   }
 
-  return <Stack>
-    <Stack.Screen name="index" options={{ headerShown: false }} />
-    <Stack.Screen name="sign-in" options={{ headerShown: false }} />
-  </Stack>;
+  return (
+    <Stack>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="sign-in" options={{ headerShown: false }} />
+      <Stack.Screen name="sign-up" options={{ headerShown: true }} />
+    </Stack>
+  );
 }

@@ -1,11 +1,12 @@
 import { View, StyleSheet } from "react-native";
-import MySafeAreaView from "../components/common/MySafeAreaView";
+import MySafeAreaView from "@/src/components/common/MySafeAreaView";
 import Hero from "@/src/components/common/home/Hero";
 import { colors } from "@/src/theme/colors";
 import HomeText from "@/src/components/common/home/HomeText";
 import MainButton from "@/src/components/common/MainButton";
 import ActionText from "@/src/components/common/ActionText";
-import BottomDash from "../components/common/BottomDash";
+import BottomDash from "@/src/components/common/BottomDash";
+
 
 export default function WelcomeScreen() {
   return (

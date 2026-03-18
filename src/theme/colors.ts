@@ -9,4 +9,6 @@ export const colors = {
   buttonText: "#F6F1FB",
   mainText: "#A1A4B2",
   line: "#E6E6E6",
+  navBorder: '#EBEAEC',
+  nav23Border: '#E6E7F2',
 };

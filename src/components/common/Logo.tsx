@@ -1,14 +1,18 @@
 import { View, Text, StyleSheet } from "react-native";
-import React from "react";
+import React, { ReactNode } from "react";
 import MoonIcon from "@/assets/svg/logo.svg";
 import { colors } from "@/src/theme/colors";
 
-export const Logo = () => {
+interface LogoProp {
+  color?: string,
+  icon?: ReactNode,
+}
+export const Logo = ({ color=colors.primary, icon=<MoonIcon/> }: LogoProp) => {
   return (
     <View style={styles.conatiner}>
-      <Text style={styles.text}>S i l e n t</Text>
-      <MoonIcon />
-      <Text style={styles.text}>M o o n</Text>
+      <Text style={[styles.text, {color}]}>S i l e n t</Text>
+      {icon}
+      <Text style={[styles.text, {color}]}>M o o n</Text>
     </View>
   );
 };
@@ -22,7 +26,6 @@ const styles = StyleSheet.create({
     
   },
   text: {
-    color: colors.primary,
     fontSize: 16,
     fontWeight: 700,
     fontFamily: "AirbnbCereal-Bold",
