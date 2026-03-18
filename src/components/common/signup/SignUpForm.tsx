@@ -8,6 +8,8 @@ import MainButton from "@/src/components/common/MainButton";
 import ActionText from "@/src/components/common/ActionText";
 import { colors } from "@/src/theme/colors";
 import CheckIcon from "@/assets/svg/checkBox.svg";
+//route wehn complete
+import { useRouter } from "expo-router";
 
 const signupSchema = z.object({
   name: z.string().min(6, "Your name must be at least 6 charcater"),
@@ -19,12 +21,15 @@ const signupSchema = z.object({
 });
 
 export default function SignUpForm() {
+  const router = useRouter();
+
   const { control, handleSubmit } = useForm({
     resolver: zodResolver(signupSchema),
   });
 
   const onSubmit = (data: any) => {
     console.log("signup data:", data);
+    router.push("/welcome")
   };
 
   return (
