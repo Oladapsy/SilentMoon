@@ -18,6 +18,7 @@ interface MainButtonProps extends TouchableOpacityProps {
   color?: string;
   textStyle?: StyleProp<TextStyle>;
   route?: Href;
+  paddingVertical?: number;
 }
 
 const MainButton = ({
@@ -27,6 +28,7 @@ const MainButton = ({
   color = colors.tetiary,
   textStyle,
   route,
+  paddingVertical = 20.5,
   ...rest
 }: MainButtonProps) => {
   const router = useRouter();
@@ -41,7 +43,7 @@ const MainButton = ({
 
   return (
     <TouchableOpacity
-      style={[styles.button, { backgroundColor: color }]}
+      style={[styles.button, { backgroundColor: color, paddingVertical }]}
       onPress={handlePress}
       {...rest}
     >
@@ -63,7 +65,7 @@ const styles = StyleSheet.create({
   button: {
     width: "100%",
     borderRadius: 38,
-    paddingVertical: 20,
+    // paddingVertical: 20,
     paddingHorizontal: 20,
     marginVertical: 10,
     flexDirection: "row",

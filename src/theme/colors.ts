@@ -13,4 +13,5 @@ export const colors = {
   nav23Border: '#E6E7F2',
   textInput: '#F2F3F7',
   error: '#ED4337',
+  welcomeText: '#FFECCC',
 };

@@ -8,6 +8,22 @@ interface ActionTextProps extends TextProps {
   sub?: string;
   mainColor?: string;
   route?: Href;
+  mainSize?: number;
+  fontWeight?:
+    | "normal"
+    | "bold"
+    | "100"
+    | "200"
+    | "300"
+    | "400"
+    | "500"
+    | "600"
+    | "700"
+    | "800"
+    | "900";
+  fontFamily?: string;
+  textAlign?: "auto" | "left" | "right" | "center" | "justify";
+  lineHeight?: number,
 }
 
 export default function ActionText({
@@ -15,10 +31,22 @@ export default function ActionText({
   sub,
   mainColor = colors.mainText,
   route,
+  mainSize = 14,
+  fontWeight = "400",
+  fontFamily = "HelveticaNeue-Bold",
+  textAlign,
+  lineHeight,
 }: ActionTextProps) {
   return (
     <View style={styles.container}>
-      <Text style={[styles.mainText, { color: mainColor }]}>{main} </Text>
+      <Text
+        style={[
+          styles.mainText,
+          { color: mainColor, fontSize: mainSize, fontFamily, fontWeight, textAlign, lineHeight },
+        ]}
+      >
+        {main}{" "}
+      </Text>
 
       {sub && route && (
         <Link href={route} asChild>

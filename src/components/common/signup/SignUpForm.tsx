@@ -29,7 +29,10 @@ export default function SignUpForm() {
 
   const onSubmit = (data: any) => {
     console.log("signup data:", data);
-    router.push("/welcome")
+    router.push({
+      pathname: "/welcome",
+      params: { name: data.name, mail: data.email },
+    });
   };
 
   return (
