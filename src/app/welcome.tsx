@@ -59,6 +59,7 @@ export default function Welcome() {
             color={colors.navBorder}
             textStyle={{ color: colors.primary }}
             paddingVertical={23}
+            route='/chooseTopic'
           />
         </View>
 
