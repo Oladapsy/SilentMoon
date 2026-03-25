@@ -19,7 +19,7 @@ export default function WelcomeScreen() {
           <View style={styles.homeTextWrapper}>
             <HomeText
               title="We are what we do"
-              description="Thousand of people are usign silent moon for smalls meditation "
+              description="Thousand of people are usign silent moon for smalls meditation"
             />
           </View>
 

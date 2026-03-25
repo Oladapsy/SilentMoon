@@ -10,9 +10,9 @@ interface LogoProp {
 export const Logo = ({ color=colors.primary, icon=<MoonIcon/> }: LogoProp) => {
   return (
     <View style={styles.conatiner}>
-      <Text style={[styles.text, {color}]}>S i l e n t</Text>
+      <Text style={[styles.text, {color}]}>Silent</Text>
       {icon}
-      <Text style={[styles.text, {color}]}>M o o n</Text>
+      <Text style={[styles.text, {color}]}>Moon</Text>
     </View>
   );
 };
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 700,
     fontFamily: "AirbnbCereal-Bold",
+    letterSpacing: 3,
   },
   icon: {},
 });

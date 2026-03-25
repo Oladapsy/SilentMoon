@@ -1,11 +1,14 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { ReactNode } from "react";
+import { colors } from "@/src/theme/colors";
 
 interface TopicCardProps {
   title: string;
   color: string;
-  image: React.ReactNode;
-  height: number;
+  imageMarginVertical?: number;
+  textMarginTop?: number;
+  image: ReactNode;
+  height?: number;
   textColor?: string;
   onPress?: () => void;
 }
@@ -14,43 +17,46 @@ export default function TopicCard({
   title,
   color,
   image,
-  height,
-  textColor = "white",
+  height = 210,
+  textColor = colors.primary,
+  imageMarginVertical,
+  textMarginTop,
   onPress,
 }: TopicCardProps) {
   return (
     <TouchableOpacity
       style={[styles.card, { backgroundColor: color, height }]}
       onPress={onPress}
-      activeOpacity={0.85}
+      activeOpacity={0.9}
     >
-      <View style={styles.imageWrapper}>{image}</View>
-      <Text style={[styles.title, { color: textColor }]}>{title}</Text>
+      <View
+        style={[styles.imageWrapper, { marginVertical: imageMarginVertical }]}
+      >
+        {image}
+      </View>
+      <Text
+        style={[styles.text, { color: textColor, marginTop: textMarginTop }]}
+      >
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   card: {
-    borderRadius: 16,
-    marginBottom: 16,
-    overflow: "hidden",
-    justifyContent: "flex-end",
-    padding: 16,
+    borderRadius: 10,
+    marginBottom: 15,
+    // justifyContent: "flex-end",
+    // padding: 16,
   },
   imageWrapper: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
     alignItems: "center",
-    justifyContent: "center",
+    marginBottom: 15,
   },
-  title: {
-    fontFamily: "HelveticaNeue-Bold",
+  text: {
     fontSize: 18,
-    lineHeight: 24,
-    zIndex: 1,
+    fontFamily: "HelveticaNeue-Bold",
+    marginLeft: 15,
   },
 });
