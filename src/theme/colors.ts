@@ -26,5 +26,16 @@ export const colors = {
   // card text
   cardText2: "#FEF9F3",
 
-  clockBg: '#F5F5F9'
+  clockBg: '#F5F5F9',
+  //day-color 
+  activeText: '#FEFFFE',
+
+  //bottom tab
+  iconInactive: '#A0A3B1',
+  //Tabs
+  dailyBg: '#444359',
+  //card
+  tabCard2: '#FFC97E',
+  tabCard2text: '#524F53',
+  tabCard1text3: '#EBEAEC',
 };

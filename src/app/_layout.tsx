@@ -44,6 +44,7 @@ export default function RootLayout() {
       <Stack.Screen name="welcome" options={{ headerShown: false }} />
       <Stack.Screen name="chooseTopic" options={{headerShown: false}} />
       <Stack.Screen name="reminders" options={{headerShown: false}} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
     </Stack>
   );
 }

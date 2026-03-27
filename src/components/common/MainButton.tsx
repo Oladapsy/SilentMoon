@@ -7,6 +7,7 @@ import {
   View,
   StyleProp,
   TextStyle,
+  DimensionValue,
 } from "react-native";
 import { colors } from "@/src/theme/colors";
 import { Href, useRouter } from "expo-router";
@@ -19,15 +20,19 @@ interface MainButtonProps extends TouchableOpacityProps {
   textStyle?: StyleProp<TextStyle>;
   route?: Href;
   paddingVertical?: number;
+  width?: DimensionValue;
+  paddingHorizontal?: number;
 }
 
 const MainButton = ({
   onPress,
   text,
+  width = "100%",
   icon,
   color = colors.tetiary,
   textStyle,
   route,
+  paddingHorizontal = 20,
   paddingVertical = 20.5,
   ...rest
 }: MainButtonProps) => {
@@ -40,10 +45,20 @@ const MainButton = ({
       onPress(); // otherwise run custom onPress
     }
   };
+  const isFullWidth = width === "100%";
 
   return (
     <TouchableOpacity
-      style={[styles.button, { backgroundColor: color, paddingVertical }]}
+      style={[
+        styles.button,
+        {
+          backgroundColor: color,
+          paddingVertical,
+          paddingHorizontal,
+          width,
+          marginVertical: isFullWidth ? 10 : 0,
+        },
+      ]}
       onPress={handlePress}
       {...rest}
     >
@@ -63,10 +78,7 @@ const MainButton = ({
 
 const styles = StyleSheet.create({
   button: {
-    width: "100%",
     borderRadius: 38,
-    // paddingVertical: 20,
-    paddingHorizontal: 20,
     marginVertical: 10,
     flexDirection: "row",
     alignItems: "center",
