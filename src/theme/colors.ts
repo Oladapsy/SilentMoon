@@ -38,4 +38,22 @@ export const colors = {
   tabCard2: '#FFC97E',
   tabCard2text: '#524F53',
   tabCard1text3: '#EBEAEC',
+
+  // recommended
+  recomCard1: '#FCF5EB',
+  recomCard2: '#FEE3B4',
+
+  //course details color
+  courseBorder: "#E4E6FD",
+
+  // voice border
+  voiceBorder: '#ADB8D9',
+
+  //navBg
+  navBg: '#C4C5CA',
+
+  // music player top nav
+  musicNavBg: '#B6B8BF',
+  musicPlayerBg: '#BABCC6',
 };
+

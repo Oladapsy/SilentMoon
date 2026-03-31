@@ -1,7 +1,8 @@
-import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
-import React from "react";
 import ActionText from "@/src/components/common/ActionText";
 import { fontFamily } from "@/src/theme/fontFamily";
+import { useRouter } from "expo-router";
+import React from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 interface Props {
   backgroundColor: string;
@@ -27,6 +28,12 @@ export default function HomeCard({
   text4Color,
   text4Bg,
 }: Props) {
+  const router = useRouter();
+
+  const handlePress = () => {
+    router.push("/courseDetails");
+  };
+
   return (
     <View style={[styles.conatiner, { backgroundColor }]}>
       <View style={styles.iconStyle}>{icon}</View>
@@ -65,6 +72,7 @@ export default function HomeCard({
         /> */}
         <TouchableOpacity
           style={[styles.actionTextBg, { backgroundColor: text4Bg }]}
+          onPress={handlePress}
         >
           <Text style={[styles.actionText, { color: text4Color }]}>START</Text>
         </TouchableOpacity>

@@ -6,24 +6,32 @@ import { router } from "expo-router";
 
 interface HeadNavProps {
   icon1?: ReactNode;
-  icon2?: ReactNode;
-  icon3?: ReactNode;
+  icon2?: React.ReactNode;
+  icon3?: React.ReactNode;
   style?: ViewStyle;
+  backgroundColor?: string;
 }
 
 export default function HeadNavigation({
   icon1 = <Back />,
   icon2,
   icon3,
-  style
+  style,
+  backgroundColor,
 }: HeadNavProps) {
   return (
     <View style={[styles.container, style]}>
-      <TouchableOpacity style={styles.icon1} onPress={() => router.back()}>{icon1}</TouchableOpacity>
+      <TouchableOpacity style={styles.icon1} onPress={() => router.back()}>
+        {icon1}
+      </TouchableOpacity>
       {icon2 && icon3 && (
         <View style={styles.icon23}>
-          <TouchableOpacity style={styles.icon2}>{icon2}</TouchableOpacity>
-          <TouchableOpacity style={styles.icon3}>{icon3}</TouchableOpacity>
+          <TouchableOpacity style={[styles.icon2, { backgroundColor }]}>
+            {icon2}
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.icon3, { backgroundColor }]}>
+            {icon3}
+          </TouchableOpacity>
         </View>
       )}
     </View>
@@ -40,11 +48,10 @@ const styles = StyleSheet.create({
   },
   icon1: {
     backgroundColor: "white",
-    padding: 20,
+    padding: 15,
     borderWidth: 1,
     borderColor: colors.navBorder,
     borderRadius: 100,
-   
   },
   icon23: {
     flexDirection: "row",
@@ -52,14 +59,16 @@ const styles = StyleSheet.create({
   },
   icon2: {
     backgroundColor: colors.sleep,
-    padding: 20,
+    opacity: 0.7,
+    padding: 15,
     borderWidth: 1,
     borderColor: colors.nav23Border,
     borderRadius: 100,
   },
   icon3: {
     backgroundColor: colors.sleep,
-    padding: 20,
+    opacity: 0.7,
+    padding: 15,
     borderWidth: 1,
     borderColor: colors.nav23Border,
     borderRadius: 100,

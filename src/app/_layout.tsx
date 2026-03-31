@@ -37,7 +37,7 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack>
+    <Stack initialRouteName="reminders">
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="sign-in" options={{ headerShown: false }} />
       <Stack.Screen name="sign-up" options={{ headerShown: false }} />
@@ -45,6 +45,8 @@ export default function RootLayout() {
       <Stack.Screen name="chooseTopic" options={{headerShown: false}} />
       <Stack.Screen name="reminders" options={{headerShown: false}} />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="courseDetails" options={{headerShown: false}}/>
+      <Stack.Screen name="musicPlayer" options={{headerShown: false}} />
     </Stack>
   );
 }

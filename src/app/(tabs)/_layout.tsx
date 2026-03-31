@@ -34,7 +34,7 @@ export default function TabLayout() {
         name="home"
         options={{
           title: "Home",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <View
               style={[styles.iconWrapper, focused && styles.activeIconWrapper]}
             >
@@ -51,7 +51,7 @@ export default function TabLayout() {
         name="sleep"
         options={{
           title: "Sleep",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <View
               style={[styles.iconWrapper, focused && styles.activeIconWrapper]}
             >
@@ -68,7 +68,7 @@ export default function TabLayout() {
         name="meditate"
         options={{
           title: "Meditate",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <View
               style={[styles.iconWrapper, focused && styles.activeIconWrapper]}
             >
@@ -85,7 +85,7 @@ export default function TabLayout() {
         name="music"
         options={{
           title: "Music",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <View
               style={[styles.iconWrapper, focused && styles.activeIconWrapper]}
             >
@@ -102,7 +102,7 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: "Profile",
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ focused }) => (
             <View
               style={[styles.iconWrapper, focused && styles.activeIconWrapper]}
             >

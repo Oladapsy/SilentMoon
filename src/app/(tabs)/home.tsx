@@ -1,4 +1,4 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, FlatList } from "react-native";
 import React from "react";
 import MySafeAreaView from "@/src/components/common/MySafeAreaView";
 import { Logo } from "@/src/components/common/Logo";
@@ -10,6 +10,86 @@ import HomeDailyIcon from "@/assets/svg/tabs/common/daily.svg";
 import HomeCard from "@/src/components/tabs/home/HomeCard";
 import BasicIcon from "@/assets/svg/tabs/common/basic.svg";
 import RelaxationIcon from "@/assets/svg/tabs/common/relaxation.svg";
+import RecommendCard from "@/src/components/tabs/home/RecommendCard";
+// the icons for the last card
+import Recom1 from "@/assets/svg/tabs/home/recom1.svg";
+import Recom2 from "@/assets/svg/tabs/home/recom2.svg";
+
+interface RecommendDataType {
+  id: number;
+  mainTitle: string;
+  subTitle: string;
+  time: string;
+  backgroundColor: string;
+  icon: React.ReactNode;
+}
+
+const RecommendData: RecommendDataType[] = [
+  {
+    id: 1,
+    mainTitle: "Focus",
+    subTitle: "MEDITATION",
+    time: "3-10 MIN",
+    backgroundColor: colors.recomCard1,
+    icon: <Recom1 />,
+  },
+  {
+    id: 2,
+    mainTitle: "Happiness",
+    subTitle: "MEDITATION",
+    time: "3-10 MIN",
+    backgroundColor: colors.recomCard2,
+    icon: <Recom2 />,
+  },
+  {
+    id: 3,
+    mainTitle: "Focus",
+    subTitle: "MEDITATION",
+    time: "3-10 MIN",
+    backgroundColor: colors.recomCard1,
+    icon: <Recom1 />,
+  },
+  {
+    id: 4,
+    mainTitle: "Happiness",
+    subTitle: "MEDITATION",
+    time: "3-10 MIN",
+    backgroundColor: colors.recomCard2,
+    icon: <Recom2 />,
+  },
+  {
+    id: 5,
+    mainTitle: "Focus",
+    subTitle: "MEDITATION",
+    time: "3-10 MIN",
+    backgroundColor: colors.recomCard1,
+    icon: <Recom1 />,
+  },
+  {
+    id: 6,
+    mainTitle: "Happiness",
+    subTitle: "MEDITATION",
+    time: "3-10 MIN",
+    backgroundColor: colors.recomCard2,
+    icon: <Recom2 />,
+  },
+  {
+    id: 7,
+    mainTitle: "Focus",
+    subTitle: "MEDITATION",
+    time: "3-10 MIN",
+    backgroundColor: colors.recomCard1,
+    icon: <Recom1 />,
+  },
+  {
+    id: 8,
+    mainTitle: "Happiness",
+    subTitle: "MEDITATION",
+    time: "3-10 MIN",
+    backgroundColor: colors.recomCard2,
+    icon: <Recom2 />,
+  },
+];
 
 export default function Home() {
   return (
@@ -85,6 +165,37 @@ export default function Home() {
           </View>
         </View>
       </View>
+      {/* Recommended for you in a flatlist*/}
+      <View style={styles.meditationSlide}>
+        <View style={styles.meditationText}>
+          <ActionText
+            main="Recomended for you"
+            mainColor={colors.primary}
+            mainSize={24}
+          />
+        </View>
+        <FlatList
+          data={RecommendData}
+          keyExtractor={(item) => item.id.toString()}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={{
+            paddingHorizontal: 20,
+            gap: 20,
+          }}
+          renderItem={({ item }) => (
+            <View>
+              <RecommendCard
+                mainTitle={item.mainTitle}
+                subTitle={item.subTitle}
+                time={item.time}
+                backgroundColor={item.backgroundColor}
+                icon={item.icon}
+              />
+            </View>
+          )}
+        />
+      </View>
     </MySafeAreaView>
   );
 }
@@ -106,5 +217,12 @@ const styles = StyleSheet.create({
   homeCard: {
     flexDirection: "row",
     gap: 20,
+  },
+  meditationSlide: {
+    marginTop: 15,
+  },
+  meditationText: {
+    marginBottom: 10,
+    marginLeft: 20,
   },
 });
