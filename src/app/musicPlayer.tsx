@@ -1,5 +1,5 @@
 import { View, StyleSheet } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import MusicPlayerBg from "@/assets/svg/music/musicBg.svg";
 import { useLocalSearchParams } from "expo-router";
 import HeadNavigation from "@/src/components/common/HeadNavigation";
@@ -11,6 +11,8 @@ import { fontFamily } from "@/src/theme/fontFamily";
 import PauseIcon from "@/assets/svg/music/pause.svg";
 import RedoIcon from "@/assets/svg/music/redo15.svg";
 import UndoIcon from "@/assets/svg/music/undo15.svg";
+import Slider from "@react-native-community/slider";
+
 
 export default function MusicPlayer() {
   const { title, subtitle, newDuration } = useLocalSearchParams<{
@@ -18,6 +20,8 @@ export default function MusicPlayer() {
     subtitle: string;
     newDuration: string;
   }>();
+  const [progress, setProgress] = useState(1.5); // current time in minutes
+  const totalDuration = 45;
 
   return (
     <View style={styles.container}>
@@ -67,11 +71,26 @@ export default function MusicPlayer() {
       {/* Line and duration */}
       <View style={styles.timeWrapper}>
         {/* line */}
-        <View style={styles.line} />
+        {/* <View style={styles.line} /> */}
+
+        {/* slider instead of line */}
+        <View style={styles.line}>
+          <Slider
+            style={{ width: "100%", height: 20, marginBottom: 15 }}
+            minimumValue={0}
+            maximumValue={totalDuration}
+            value={progress}
+            onValueChange={(val) => setProgress(val)}
+            minimumTrackTintColor={colors.primary}
+            maximumTrackTintColor={colors.iconInactive}
+            thumbTintColor={colors.primary}
+          />
+        </View>
+
         {/* Duration */}
         <View style={styles.durationTime}>
           <ActionText
-            main={"01:30"}
+            main={"01:36"}
             mainColor={colors.primary}
             mainSize={16}
             fontFamily={fontFamily.bold}
@@ -121,27 +140,23 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     borderRadius: 35,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   outPauseWrapper: {
     backgroundColor: colors.musicPlayerBg,
     width: 94,
     height: 94,
     borderRadius: 47,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   timeWrapper: {
     marginTop: 50,
     marginHorizontal: 20,
   },
   line: {
-    borderBottomWidth: 3,
-    borderColor: colors.iconInactive,
-    marginBottom: 15,
     marginHorizontal: 14,
-    borderRadius: 10,
   },
   durationTime: {
     flexDirection: "row",

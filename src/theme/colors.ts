@@ -26,34 +26,39 @@ export const colors = {
   // card text
   cardText2: "#FEF9F3",
 
-  clockBg: '#F5F5F9',
-  //day-color 
-  activeText: '#FEFFFE',
+  clockBg: "#F5F5F9",
+  //day-color
+  activeText: "#FEFFFE",
 
   //bottom tab
-  iconInactive: '#A0A3B1',
+  iconInactive: "#A0A3B1",
   //Tabs
-  dailyBg: '#444359',
+  dailyBg: "#444359",
   //card
-  tabCard2: '#FFC97E',
-  tabCard2text: '#524F53',
-  tabCard1text3: '#EBEAEC',
+  tabCard2: "#FFC97E",
+  tabCard2text: "#524F53",
+  tabCard1text3: "#EBEAEC",
 
   // recommended
-  recomCard1: '#FCF5EB',
-  recomCard2: '#FEE3B4',
+  recomCard1: "#FCF5EB",
+  recomCard2: "#FEE3B4",
 
   //course details color
   courseBorder: "#E4E6FD",
 
   // voice border
-  voiceBorder: '#ADB8D9',
+  voiceBorder: "#ADB8D9",
 
   //navBg
-  navBg: '#C4C5CA',
+  navBg: "#C4C5CA",
 
   // music player top nav
-  musicNavBg: '#B6B8BF',
-  musicPlayerBg: '#BABCC6',
+  musicNavBg: "#B6B8BF",
+  musicPlayerBg: "#BABCC6",
+
+  daily2Bg: "#F1DDCF",
+  dailyText2: '#5A6175',
+  iconPlay2: "#F0F1F2",
 };
+
 

@@ -92,7 +92,7 @@ export default function CourseDetails() {
                 params: {
                   title: item.title,
                   subtitle: item.subtitle,
-                  duration: item.newDuration,
+                  newDuration: item.newDuration,
                 },
               });
             }}
