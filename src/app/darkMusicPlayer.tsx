@@ -5,7 +5,8 @@ import { useLocalSearchParams } from "expo-router";
 import HeadNavigation from "@/src/components/common/HeadNavigation";
 import HeadIcon from "@/assets/svg/tabs/common/courseDetails/headDownload.svg";
 import HeartIcon from "@/assets/svg/tabs/common/courseDetails/heart.svg";
-import { lightColors } from "@/src/theme/colors";
+import X from "@/assets/svg/tabs/common/courseDetails/X.svg";
+import { darkColors, lightColors } from "@/src/theme/colors";
 import ActionText from "@/src/components/common/ActionText";
 import { fontFamily } from "@/src/theme/fontFamily";
 import PauseIcon from "@/assets/svg/music/pause.svg";
@@ -13,12 +14,9 @@ import RedoIcon from "@/assets/svg/music/redo15.svg";
 import UndoIcon from "@/assets/svg/music/undo15.svg";
 import Slider from "@react-native-community/slider";
 
-
 export default function DarkMusicPlayer() {
-  const { title, subtitle, newDuration } = useLocalSearchParams<{
+  const { title } = useLocalSearchParams<{
     title: string;
-    subtitle: string;
-    newDuration: string;
   }>();
   const [progress, setProgress] = useState(1.5); // current time in minutes
   const totalDuration = 45;
@@ -31,9 +29,10 @@ export default function DarkMusicPlayer() {
 
       <View style={styles.topNav}>
         <HeadNavigation
+          icon1={<X />}
           icon2={<HeartIcon />}
           icon3={<HeadIcon />}
-          backgroundColor={lightColors.navBg}
+          backgroundColor={lightColors.sleep}
         />
       </View>
 
@@ -41,12 +40,12 @@ export default function DarkMusicPlayer() {
         <ActionText
           main={title}
           mainSize={34}
-          mainColor={lightColors.primary}
+          mainColor={darkColors.primary}
           fontFamily={fontFamily.bold}
         />
         <View style={styles.subtitle}>
           <ActionText
-            main={subtitle}
+            main="SLEEP MUSIC"
             mainColor={lightColors.iconInactive}
             mainSize={14}
             fontFamily={fontFamily.normal}
@@ -57,23 +56,19 @@ export default function DarkMusicPlayer() {
       {/* Player */}
       <View style={styles.player}>
         {/* Undo icon */}
-        <UndoIcon />
+        <UndoIcon color="#E6E7F2"/>
         {/* pause icon */}
         <View style={styles.outPauseWrapper}>
           <View style={styles.pauseWrapper}>
-            <PauseIcon />
+            <PauseIcon color="#3F414E"/>
           </View>
         </View>
         {/* Redo icon */}
-        <RedoIcon />
+        <RedoIcon color="#E6E7F2"/>
       </View>
 
       {/* Line and duration */}
       <View style={styles.timeWrapper}>
-        {/* line */}
-        {/* <View style={styles.line} /> */}
-
-        {/* slider instead of line */}
         <View style={styles.line}>
           <Slider
             style={{ width: "100%", height: 20, marginBottom: 15 }}
@@ -81,8 +76,8 @@ export default function DarkMusicPlayer() {
             maximumValue={totalDuration}
             value={progress}
             onValueChange={(val) => setProgress(val)}
-            minimumTrackTintColor={lightColors.primary}
-            maximumTrackTintColor={lightColors.iconInactive}
+            minimumTrackTintColor="#E6E7F2"
+            maximumTrackTintColor="#47557E"
             thumbTintColor={lightColors.primary}
           />
         </View>
@@ -91,13 +86,13 @@ export default function DarkMusicPlayer() {
         <View style={styles.durationTime}>
           <ActionText
             main={"01:36"}
-            mainColor={lightColors.primary}
+            mainColor="#E6E7F2"
             mainSize={16}
             fontFamily={fontFamily.bold}
           />
           <ActionText
-            main={newDuration}
-            mainColor={lightColors.primary}
+            main="45:00"
+            mainColor="#E6E7F2"
             mainSize={16}
             fontFamily={fontFamily.bold}
           />
@@ -135,7 +130,7 @@ const styles = StyleSheet.create({
     marginTop: 35,
   },
   pauseWrapper: {
-    backgroundColor: lightColors.primary,
+    backgroundColor: "#E6E7F2",
     // padding: 25,
     width: 70,
     height: 70,
@@ -144,7 +139,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   outPauseWrapper: {
-    backgroundColor: lightColors.musicPlayerBg,
+    backgroundColor: "#47557E",
     width: 94,
     height: 94,
     borderRadius: 47,

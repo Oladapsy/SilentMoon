@@ -124,6 +124,12 @@ export default function SleepMusic() {
                 key={item.id}
                 title={item.title}
                 icon={item.icon}
+                onPress={() =>
+                  router.push({
+                    pathname: "/sleepDetail",
+                    params: { title: item.title },
+                  })
+                }
               />
             ))}
           </View>
@@ -133,6 +139,12 @@ export default function SleepMusic() {
                 key={item.id}
                 title={item.title}
                 icon={item.icon}
+                onPress={() =>
+                  router.push({
+                    pathname: "/sleepDetail",
+                    params: { title: item.title },
+                  })
+                }
               />
             ))}
           </View>
@@ -164,9 +176,9 @@ const styles = StyleSheet.create({
     borderRadius: 100,
   },
   card: {
-    flexDirection: 'row',
+    flexDirection: "row",
     gap: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });

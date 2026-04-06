@@ -57,15 +57,15 @@ export default function MusicPlayer() {
       {/* Player */}
       <View style={styles.player}>
         {/* Undo icon */}
-        <UndoIcon />
+        <UndoIcon color="#A0A3B1"/>
         {/* pause icon */}
         <View style={styles.outPauseWrapper}>
           <View style={styles.pauseWrapper}>
-            <PauseIcon />
+            <PauseIcon color="#FBFBFB" />
           </View>
         </View>
         {/* Redo icon */}
-        <RedoIcon />
+        <RedoIcon color="#A0A3B1"/>
       </View>
 
       {/* Line and duration */}

@@ -7,14 +7,15 @@ import HeadNavigation from "../HeadNavigation";
 
 const screenWidth = Dimensions.get("window").width;
 
-export default function CourseDetailsHeader() {
+interface Props {
+  image?: React.ReactNode;
+  arrowcolor?: string;
+}
+
+export default function CourseDetailsHeader({ image, arrowcolor }: Props) {
   return (
     <View style={styles.container}>
-      <CourseBg
-        height={320}
-        width={screenWidth}
-        // preserveAspectRatio="xMidYMid slice"
-      />
+      {image ?? <CourseBg height={200} width={screenWidth} />}
       <View style={styles.navigation}>
         <HeadNavigation icon2={<HeartIcon />} icon3={<HeadIcon />} style={{}} />
       </View>
@@ -25,7 +26,7 @@ export default function CourseDetailsHeader() {
 const styles = StyleSheet.create({
   container: {
     overflow: "hidden",
-    height: 300,
+    height: 250,
   },
   navigation: {
     position: "absolute",

@@ -31,7 +31,7 @@ export default function RootLayout() {
     "HelveticaNeue-UltraLight": require("@/assets/fonts/helvetica-neue-5/HelveticaNeueUltraLight.otf"),
     "HelveticaNeue-UltraLightItalic": require("@/assets/fonts/helvetica-neue-5/HelveticaNeueUltraLightItalic.otf"),
 
-    // Garamond Premier Pro Font 
+    // Garamond Premier Pro Font
     "AGaramondPro-Bold": require("@/assets/fonts/adobe-garamond-pro-2/AGaramondPro-Bold.otf"),
     "AGaramondPro-BoldItalic": require("@/assets/fonts/adobe-garamond-pro-2/AGaramondPro-BoldItalic.otf"),
     "AGaramondPro-Italic": require("@/assets/fonts/adobe-garamond-pro-2/AGaramondPro-Italic.otf"),
@@ -48,11 +48,13 @@ export default function RootLayout() {
       <Stack.Screen name="sign-in" options={{ headerShown: false }} />
       <Stack.Screen name="sign-up" options={{ headerShown: false }} />
       <Stack.Screen name="welcome" options={{ headerShown: false }} />
-      <Stack.Screen name="chooseTopic" options={{headerShown: false}} />
-      <Stack.Screen name="reminders" options={{headerShown: false}} />
+      <Stack.Screen name="chooseTopic" options={{ headerShown: false }} />
+      <Stack.Screen name="reminders" options={{ headerShown: false }} />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="courseDetails" options={{headerShown: false}}/>
-      <Stack.Screen name="musicPlayer" options={{headerShown: false}} />
+      <Stack.Screen name="courseDetails" options={{ headerShown: false }} />
+      <Stack.Screen name="musicPlayer" options={{ headerShown: false }} />
+      <Stack.Screen name="darkMusicPlayer" options={{ headerShown: false }} />
+      <Stack.Screen name="sleepDetail" options={{ headerShown: false }} />
     </Stack>
   );
 }

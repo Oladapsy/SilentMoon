@@ -75,5 +75,4 @@ export const darkColors = {
   musicNavBg: "#03174C",
 
 
-
 };

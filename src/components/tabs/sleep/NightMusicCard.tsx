@@ -1,4 +1,4 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import ActionText from "../../common/ActionText";
 import Elipse from "@/assets/svg/tabs/common/ellipse.svg";
@@ -8,10 +8,12 @@ import { fontFamily } from "@/src/theme/fontFamily";
 interface Props {
   icon: React.ReactNode;
   title: string;
+  onPress?: () => void;
 }
 
-export default function NightMusicCard({ icon, title }: Props) {
+export default function NightMusicCard({ icon, title, onPress }: Props) {
   return (
+    <TouchableOpacity onPress={onPress}>
     <View style={styles.container}>
 
         <View>
@@ -43,11 +45,14 @@ export default function NightMusicCard({ icon, title }: Props) {
         />
       </View>
     </View>
+    </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    marginBottom: 10,
+  },
   titleWrapper: {
     paddingTop: 7,
     paddingBottom: 5,
