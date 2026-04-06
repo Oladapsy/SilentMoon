@@ -3,7 +3,7 @@ import { View, StyleSheet } from "react-native";
 import PlayIcon from "@/assets/svg/tabs/common/play.svg";
 import ActionText from "./ActionText";
 import Elipse from "@/assets/svg/tabs/common/ellipse.svg";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 
 interface Props {
   title: string;
@@ -25,8 +25,8 @@ export default function Daily({
   subTitle,
   backgroundColor,
   titleColor = "white",
-  subTitleColor = colors.navBorder,
-  minorTitleColor = colors.navBorder,
+  subTitleColor = lightColors.navBorder,
+  minorTitleColor = lightColors.navBorder,
   playBg,
   icon,
   playIconColor,

@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 
 interface HomeTextProps {
   title: string;
@@ -23,14 +23,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   titleText: {
-    color: colors.primary,
+    color: lightColors.primary,
     fontFamily: "HelveticaNeue-Bold",
     fontSize: 28,
     textAlign: "center",
     marginBottom: 13,
   },
   descriptionText: {
-    color: colors.secondary,
+    color: lightColors.secondary,
     fontFamily: "HelveticaNeue-Light",
     fontSize: 13,
     textAlign: "center",

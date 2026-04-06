@@ -1,6 +1,6 @@
 import { View, StyleSheet } from "react-native";
 import React, { useState } from "react";
-import MusicPlayerBg from "@/assets/svg/music/musicBg.svg";
+import DarkMusicPlayerBg from "@/assets/svg/music/darkMusicBg.svg";
 import { useLocalSearchParams } from "expo-router";
 import HeadNavigation from "@/src/components/common/HeadNavigation";
 import HeadIcon from "@/assets/svg/tabs/common/courseDetails/headDownload.svg";
@@ -14,7 +14,7 @@ import UndoIcon from "@/assets/svg/music/undo15.svg";
 import Slider from "@react-native-community/slider";
 
 
-export default function MusicPlayer() {
+export default function DarkMusicPlayer() {
   const { title, subtitle, newDuration } = useLocalSearchParams<{
     title: string;
     subtitle: string;
@@ -26,7 +26,7 @@ export default function MusicPlayer() {
   return (
     <View style={styles.container}>
       <View style={styles.bgImage}>
-        <MusicPlayerBg />
+        <DarkMusicPlayerBg />
       </View>
 
       <View style={styles.topNav}>

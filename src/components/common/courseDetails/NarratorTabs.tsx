@@ -1,6 +1,6 @@
 import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
 import React from "react";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import { fontFamily } from "@/src/theme/fontFamily";
 
 interface Props {
@@ -36,21 +36,21 @@ const styles = StyleSheet.create({
     gap: 50,
     paddingHorizontal: 20,
     borderBottomWidth: 1,
-    borderBottomColor: colors.courseBorder,
+    borderBottomColor: lightColors.courseBorder,
   },
   tab: {
-    color: colors.secondary,
+    color: lightColors.secondary,
     fontFamily: fontFamily.normal,
     fontSize: 15,
     paddingBottom: 10,
   },
   activeTab: {
-    color: colors.tetiary,
+    color: lightColors.tetiary,
     fontFamily: fontFamily.normal,
   },
   underline: {
     height: 2,
-    backgroundColor: colors.tetiary,
+    backgroundColor: lightColors.tetiary,
     borderRadius: 2,
     width: 40,
     marginHorizontal: 28,

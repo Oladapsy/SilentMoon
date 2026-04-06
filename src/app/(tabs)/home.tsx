@@ -3,7 +3,7 @@ import React from "react";
 import MySafeAreaView from "@/src/components/common/MySafeAreaView";
 import { Logo } from "@/src/components/common/Logo";
 import ActionText from "@/src/components/common/ActionText";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import { fontFamily } from "@/src/theme/fontFamily";
 import Daily from "@/src/components/common/Daily";
 import HomeDailyIcon from "@/assets/svg/tabs/common/daily.svg";
@@ -30,7 +30,7 @@ const RecommendData: RecommendDataType[] = [
     mainTitle: "Focus",
     subTitle: "MEDITATION",
     time: "3-10 MIN",
-    backgroundColor: colors.recomCard1,
+    backgroundColor: lightColors.recomCard1,
     icon: <Recom1 />,
   },
   {
@@ -38,7 +38,7 @@ const RecommendData: RecommendDataType[] = [
     mainTitle: "Happiness",
     subTitle: "MEDITATION",
     time: "3-10 MIN",
-    backgroundColor: colors.recomCard2,
+    backgroundColor: lightColors.recomCard2,
     icon: <Recom2 />,
   },
   {
@@ -46,7 +46,7 @@ const RecommendData: RecommendDataType[] = [
     mainTitle: "Focus",
     subTitle: "MEDITATION",
     time: "3-10 MIN",
-    backgroundColor: colors.recomCard1,
+    backgroundColor: lightColors.recomCard1,
     icon: <Recom1 />,
   },
   {
@@ -54,7 +54,7 @@ const RecommendData: RecommendDataType[] = [
     mainTitle: "Happiness",
     subTitle: "MEDITATION",
     time: "3-10 MIN",
-    backgroundColor: colors.recomCard2,
+    backgroundColor: lightColors.recomCard2,
     icon: <Recom2 />,
   },
   {
@@ -62,7 +62,7 @@ const RecommendData: RecommendDataType[] = [
     mainTitle: "Focus",
     subTitle: "MEDITATION",
     time: "3-10 MIN",
-    backgroundColor: colors.recomCard1,
+    backgroundColor: lightColors.recomCard1,
     icon: <Recom1 />,
   },
   {
@@ -70,7 +70,7 @@ const RecommendData: RecommendDataType[] = [
     mainTitle: "Happiness",
     subTitle: "MEDITATION",
     time: "3-10 MIN",
-    backgroundColor: colors.recomCard2,
+    backgroundColor: lightColors.recomCard2,
     icon: <Recom2 />,
   },
   {
@@ -78,7 +78,7 @@ const RecommendData: RecommendDataType[] = [
     mainTitle: "Focus",
     subTitle: "MEDITATION",
     time: "3-10 MIN",
-    backgroundColor: colors.recomCard1,
+    backgroundColor: lightColors.recomCard1,
     icon: <Recom1 />,
   },
   {
@@ -86,7 +86,7 @@ const RecommendData: RecommendDataType[] = [
     mainTitle: "Happiness",
     subTitle: "MEDITATION",
     time: "3-10 MIN",
-    backgroundColor: colors.recomCard2,
+    backgroundColor: lightColors.recomCard2,
     icon: <Recom2 />,
   },
 ];
@@ -108,7 +108,7 @@ export default function Home() {
             <ActionText
               main="Good Morning, Afsar"
               mainSize={28}
-              mainColor={colors.primary}
+              mainColor={lightColors.primary}
               fontFamily={fontFamily.bold}
             />
             {/* the smaller text */}
@@ -116,7 +116,7 @@ export default function Home() {
               <ActionText
                 main="We Wish you have a good day"
                 mainSize={20}
-                mainColor={colors.mainText}
+                mainColor={lightColors.mainText}
                 fontFamily={fontFamily.light}
               />
             </View>
@@ -125,28 +125,28 @@ export default function Home() {
           {/* cards */}
           <View style={styles.homeCard}>
             <HomeCard
-              backgroundColor={colors.tetiary}
+              backgroundColor={lightColors.tetiary}
               icon={<BasicIcon />}
               text1="Basics"
               text2="COURSE"
               text3="3-10 MIN"
-              text1Color={colors.welcomeText}
-              text2Color={colors.welcomeText}
-              text3Color={colors.tabCard1text3}
-              text4Color={colors.primary}
-              text4Bg={colors.navBorder}
+              text1Color={lightColors.welcomeText}
+              text2Color={lightColors.welcomeText}
+              text3Color={lightColors.tabCard1text3}
+              text4Color={lightColors.primary}
+              text4Bg={lightColors.navBorder}
             />
             <HomeCard
-              backgroundColor={colors.tabCard2}
+              backgroundColor={lightColors.tabCard2}
               icon={<RelaxationIcon />}
               text1="Relaxation"
               text2="MUSIC"
               text3="3-10 MIN"
-              text1Color={colors.primary}
-              text2Color={colors.tabCard2text}
-              text3Color={colors.tabCard2text}
-              text4Color={colors.activeText}
-              text4Bg={colors.primary}
+              text1Color={lightColors.primary}
+              text2Color={lightColors.tabCard2text}
+              text3Color={lightColors.tabCard2text}
+              text4Color={lightColors.activeText}
+              text4Bg={lightColors.primary}
             />
           </View>
 
@@ -155,9 +155,9 @@ export default function Home() {
             <Daily
               icon={<HomeDailyIcon />}
               playBg="white"
-              playIconColor={colors.primary}
+              playIconColor={lightColors.primary}
               titleColor="white"
-              backgroundColor={colors.dailyBg}
+              backgroundColor={lightColors.dailyBg}
               title="Daily Thought"
               subTitle="MEDITATION"
               minorTitle="3-10 MIN"
@@ -170,7 +170,7 @@ export default function Home() {
         <View style={styles.meditationText}>
           <ActionText
             main="Recomended for you"
-            mainColor={colors.primary}
+            mainColor={lightColors.primary}
             mainSize={24}
           />
         </View>

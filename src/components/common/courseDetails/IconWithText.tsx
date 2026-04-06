@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 
 interface Props {
   icon: React.ReactNode;
@@ -24,6 +24,6 @@ const styles = StyleSheet.create({
     }
     ,
     text: {
-        color: colors.secondary,
+        color: lightColors.secondary,
     }
 })

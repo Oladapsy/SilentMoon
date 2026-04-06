@@ -1,6 +1,6 @@
 import { View, StyleSheet } from "react-native";
 import React from "react";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import MySafeAreaView from "@/src/components/common/MySafeAreaView";
 import { Logo } from "@/src/components/common/Logo";
 import ActionText from "@/src/components/common/ActionText";
@@ -16,27 +16,27 @@ export default function Welcome() {
   }>();
 
   return (
-    <MySafeAreaView color={colors.tetiary}>
+    <MySafeAreaView color={lightColors.tetiary}>
       <View style={styles.container}>
         <Logo color="white" />
 
         <View style={styles.mainText}>
           <ActionText
             main={`Hi ${name ?? "Afsar"}, Welcome`}
-            mainColor={colors.welcomeText}
+            mainColor={lightColors.welcomeText}
             mainSize={30}
             fontFamily="HelveticaNeue-Heavy"
           />
           <ActionText
             main="to Silent Moon"
-            mainColor={colors.welcomeText}
+            mainColor={lightColors.welcomeText}
             mainSize={30}
             fontFamily="HelveticaNeue-Light"
           />
           <View style={styles.smallText}>
             <ActionText
               main="Explore the app, Find some peace of mind to prepare for meditation."
-              mainColor={colors.navBorder}
+              mainColor={lightColors.navBorder}
               mainSize={16}
               fontFamily="HelveticaNeue-Light"
               textAlign="center"
@@ -56,8 +56,8 @@ export default function Welcome() {
         <View style={styles.actionBtn}>
           <MainButton
             text="GET STARTED"
-            color={colors.navBorder}
-            textStyle={{ color: colors.primary }}
+            color={lightColors.navBorder}
+            textStyle={{ color: lightColors.primary }}
             paddingVertical={23}
             route='/chooseTopic'
           />

@@ -4,7 +4,7 @@ import HeadNavigation from "@/src/components/common/HeadNavigation";
 import MainButton from "@/src/components/common/MainButton";
 import FacebookIcon from "@/assets/svg/facebook.svg";
 import GoogleIcon from "@/assets/svg/google.svg";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import SignInbg1 from "@/assets/svg/signin/signInBg1.svg";
 import SignInbg2 from "@/assets/svg/signin/signInBg2.svg";
 import SignInbg3 from "@/assets/svg/signin/signInBg3.svg";
@@ -30,8 +30,8 @@ const SignHero = ({ text = "Welcome Back!" }: Props) => {
       <MainButton
         text="CONTINUE WITH GOOGLE"
         icon={<GoogleIcon />}
-        color={colors.navBorder}
-        textStyle={{ color: colors.primary }}
+        color={lightColors.navBorder}
+        textStyle={{ color: lightColors.primary }}
       />
     </View>
   );

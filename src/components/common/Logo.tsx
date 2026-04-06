@@ -1,13 +1,13 @@
 import { View, Text, StyleSheet } from "react-native";
 import React, { ReactNode } from "react";
 import MoonIcon from "@/assets/svg/logo.svg";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 
 interface LogoProp {
   color?: string,
   icon?: ReactNode,
 }
-export const Logo = ({ color=colors.primary, icon=<MoonIcon/> }: LogoProp) => {
+export const Logo = ({ color=lightColors.primary, icon=<MoonIcon/> }: LogoProp) => {
   return (
     <View style={styles.conatiner}>
       <Text style={[styles.text, {color}]}>Silent</Text>

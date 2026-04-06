@@ -3,7 +3,7 @@ import React from "react";
 import MySafeAreaView from "@/src/components/common/MySafeAreaView";
 import TopicBg from "@/assets/svg/topic/topicBg.svg";
 import ActionText from "@/src/components/common/ActionText";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import TopicCard from "@/src/components/common/topic/TopicCard";
 import MainButton from "@/src/components/common/MainButton";
 
@@ -21,43 +21,43 @@ const LEFT_COLUMN = [
   {
     id: "1",
     title: "Reduce Stress",
-    color: colors.card1,
+    color: lightColors.card1,
     image: <ReduceStressSvg />,
     height: 210, // taller card
-    textColor: colors.welcomeText,
+    textColor: lightColors.welcomeText,
     textMarginTop: 20,
   },
   {
     id: "3",
     title: "Increase\nHappiness",
-    color: colors.card3,
+    color: lightColors.card3,
     image: <IncreaseHappinessSvg />,
     height: 167, // shorter card
-    textColor: colors.primary,
+    textColor: lightColors.primary,
     textMarginTop: 0,
   },
   {
     id: "5",
     title: "Personal\nGrowth",
-    color: colors.card5,
+    color: lightColors.card5,
     image: <PersonalGrowthSvg />,
     height: 210,
-    textColor: colors.welcomeText,
+    textColor: lightColors.welcomeText,
     textMarginTop: 20,
   },
   {
     id: "7",
     title: "Improve\nPerformance",
-    color: colors.card2,
+    color: lightColors.card2,
     image: <ImprovePerformanceSvg />,
     height: 167,
-    textColor: colors.cardText2,
+    textColor: lightColors.cardText2,
     textMarginTop: 5,
   },
   {
     id: "8",
     title: "Reduce Anxiety",
-    color: colors.card4,
+    color: lightColors.card4,
     image: <ReduceAnxietySvg />,
     height: 210,
     textMarginTop: 28,
@@ -65,10 +65,10 @@ const LEFT_COLUMN = [
   {
     id: "9",
     title: "Better Sleep",
-    color: colors.card6,
+    color: lightColors.card6,
     image: <BetterSleepSvg />,
     height: 167,
-    textColor: colors.navBorder,
+    textColor: lightColors.navBorder,
     textMarginTop: 28,
   },
 ];
@@ -77,16 +77,16 @@ const RIGHT_COLUMN = [
   {
     id: "2",
     title: "Improve\nPerformance",
-    color: colors.card2,
+    color: lightColors.card2,
     image: <ImprovePerformanceSvg />,
     height: 167,
-    textColor: colors.cardText2,
+    textColor: lightColors.cardText2,
     textMarginTop: 5,
   },
   {
     id: "4",
     title: "Reduce Anxiety",
-    color: colors.card4,
+    color: lightColors.card4,
     image: <ReduceAnxietySvg />,
     height: 210,
     textMarginTop: 28,
@@ -94,36 +94,36 @@ const RIGHT_COLUMN = [
   {
     id: "6",
     title: "Better Sleep",
-    color: colors.card6,
+    color: lightColors.card6,
     image: <BetterSleepSvg />,
     height: 167,
-    textColor: colors.navBorder,
+    textColor: lightColors.navBorder,
     textMarginTop: 28,
   },
   {
     id: "8",
     title: "Reduce Stress",
-    color: colors.card1,
+    color: lightColors.card1,
     image: <ReduceStressSvg />,
     height: 210, // taller card
-    textColor: colors.welcomeText,
+    textColor: lightColors.welcomeText,
     textMarginTop: 20,
   },
   {
     id: "10",
     title: "Increase\nHappiness",
-    color: colors.card3,
+    color: lightColors.card3,
     image: <IncreaseHappinessSvg />,
     height: 167, // shorter card
-    textColor: colors.primary,
+    textColor: lightColors.primary,
   },
   {
     id: "12",
     title: "Personal\nGrowth",
-    color: colors.card5,
+    color: lightColors.card5,
     image: <PersonalGrowthSvg />,
     height: 210,
-    textColor: colors.welcomeText,
+    textColor: lightColors.welcomeText,
     textMarginTop: 20,
   },
 ];
@@ -142,14 +142,14 @@ export default function chooseTopic() {
           <ActionText
             main="What Brings you"
             mainSize={28}
-            mainColor={colors.primary}
+            mainColor={lightColors.primary}
             fontFamily="HelveticaNeue-Bold"
           />
           <View style={styles.textMoon}>
             <ActionText
               main="to Silent Moon?"
               mainSize={28}
-              mainColor={colors.primary}
+              mainColor={lightColors.primary}
               fontFamily="HelveticaNeue-light"
             />
           </View>

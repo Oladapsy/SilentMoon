@@ -1,6 +1,6 @@
 // i want to define the colors here
 
-export const colors = {
+export const lightColors = {
   sleep: "#03174C",
   primary: "#3F414E",
   secondary: "#A1A4B2",
@@ -57,8 +57,23 @@ export const colors = {
   musicPlayerBg: "#BABCC6",
 
   daily2Bg: "#F1DDCF",
-  dailyText2: '#5A6175',
+  dailyText2: "#5A6175",
   iconPlay2: "#F0F1F2",
+
+  // sleep
+  sleepText: '#FFE7BF',
+  sleepText2: '#F9F9FF',
+
+  sleepMusicCard1: '#98A1BD',
+  inactiveColorCard: '#586894',
 };
 
+export const darkColors = {
+  primary: "#E6E7F2",
 
+  // music player top nav
+  musicNavBg: "#03174C",
+
+
+
+};

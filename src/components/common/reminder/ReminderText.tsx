@@ -1,7 +1,7 @@
 import { View, StyleSheet } from "react-native";
 import React from "react";
 import ActionText from "@/src/components/common/ActionText";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import { fontFamily } from "@/src/theme/fontFamily";
 
 interface Props {
@@ -16,7 +16,7 @@ export default function ReminderText({ mainText, minorText }: Props) {
           <ActionText
             main={mainText}
             mainSize={24}
-            mainColor={colors.primary}
+            mainColor={lightColors.primary}
             fontFamily={fontFamily.bold}
           />
         </View>
@@ -24,7 +24,7 @@ export default function ReminderText({ mainText, minorText }: Props) {
           <ActionText
             main={minorText}
             mainSize={16}
-            mainColor={colors.primary}
+            mainColor={lightColors.primary}
             fontFamily={fontFamily.light}
           />
         </View>

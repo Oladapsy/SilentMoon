@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import CourseDetailsHeader from "@/src/components/common/courseDetails/CourseDetailsHeader";
 import MySafeAreaView from "@/src/components/common/MySafeAreaView";
 import ActionText from "@/src/components/common/ActionText";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import IconWithText from "@/src/components/common/courseDetails/IconWithText";
 import RedHeart from "@/assets/svg/tabs/common/courseDetails/redLove.svg";
 import HeadsetIcon from "@/assets/svg/tabs/common/courseDetails/headPjhone.svg";
@@ -36,13 +36,13 @@ export default function CourseDetails() {
       <View style={styles.textWrapper}>
         <ActionText
           main="Happy Morning"
-          mainColor={colors.primary}
+          mainColor={lightColors.primary}
           mainSize={30}
         />
         <View style={styles.courseText}>
           <ActionText
             main="COURSE"
-            mainColor={colors.secondary}
+            mainColor={lightColors.secondary}
             mainSize={13}
           />
         </View>
@@ -51,7 +51,7 @@ export default function CourseDetails() {
         <View>
           <ActionText
             main="Ease the mind into a restful night's sleep with these deep, amblent tones."
-            mainColor={colors.secondary}
+            mainColor={lightColors.secondary}
             mainSize={16}
             fontFamily={fontFamily.light}
           />
@@ -68,7 +68,7 @@ export default function CourseDetails() {
           <ActionText
             main="Pick a Narrator"
             mainSize={20}
-            mainColor={colors.primary}
+            mainColor={lightColors.primary}
           />
         </View>
       </View>

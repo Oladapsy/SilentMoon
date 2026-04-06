@@ -2,7 +2,7 @@ import Daily2Icon from "@/assets/svg/tabs/meditate/daily2Icon.svg";
 import ActionText from "@/src/components/common/ActionText";
 import Daily from "@/src/components/common/Daily";
 import MySafeAreaView from "@/src/components/common/MySafeAreaView";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import { fontFamily } from "@/src/theme/fontFamily";
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
@@ -48,11 +48,11 @@ export default function Meditate() {
   return (
     <MySafeAreaView>
       <View style={styles.headText}>
-        <ActionText main="Meditate" mainSize={28} mainColor={colors.primary} />
+        <ActionText main="Meditate" mainSize={28} mainColor={lightColors.primary} />
         <View style={styles.minorText}>
           <ActionText
             main="we can learn how to recognize when our minds are doing their normal everyday acrobatics."
-            mainColor={colors.iconInactive}
+            mainColor={lightColors.iconInactive}
             mainSize={16}
             fontFamily={fontFamily.light}
             textAlign="center"
@@ -68,16 +68,16 @@ export default function Meditate() {
       {/* Daily Calm */}
       <View style={styles.daily}>
         <Daily
-          backgroundColor={colors.daily2Bg}
+          backgroundColor={lightColors.daily2Bg}
           title="Daily Calm"
-          titleColor={colors.primary}
+          titleColor={lightColors.primary}
           subTitle="APR 30"
-          subTitleColor={colors.dailyText2}
+          subTitleColor={lightColors.dailyText2}
           minorTitle="PAUSE PRACTICE"
-          minorTitleColor={colors.dailyText2}
-          playBg={colors.primary}
+          minorTitleColor={lightColors.dailyText2}
+          playBg={lightColors.primary}
           icon={<Daily2Icon />}
-          playIconColor={colors.iconPlay2}
+          playIconColor={lightColors.iconPlay2}
         />
       </View>
 

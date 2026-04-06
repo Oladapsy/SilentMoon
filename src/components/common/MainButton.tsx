@@ -9,7 +9,7 @@ import {
   TextStyle,
   DimensionValue,
 } from "react-native";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import { Href, useRouter } from "expo-router";
 
 interface MainButtonProps extends TouchableOpacityProps {
@@ -29,7 +29,7 @@ const MainButton = ({
   text,
   width = "100%",
   icon,
-  color = colors.tetiary,
+  color = lightColors.tetiary,
   textStyle,
   route,
   paddingHorizontal = 20,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   text: {
-    color: colors.buttonText,
+    color: lightColors.buttonText,
     fontSize: 14,
     fontFamily: "HelveticaNeue-Medium",
     textAlign: "center",

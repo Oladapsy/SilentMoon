@@ -2,7 +2,7 @@ import { View, StyleSheet } from "react-native";
 import React from "react";
 import ActionText from "@/src/components/common/ActionText";
 import Ellipse from "@/assets/svg/tabs/common/ellipse.svg";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 
 interface Props {
   mainTitle: string;
@@ -24,16 +24,16 @@ export default function RecommendCard({
       <View style={[styles.iconContainer, { backgroundColor }]}>{icon}</View>
 
       <View style={styles.allText}>
-        <ActionText main={mainTitle} mainColor={colors.primary} mainSize={18} />
+        <ActionText main={mainTitle} mainColor={lightColors.primary} mainSize={18} />
         {/* Text bottom */}
         <View style={styles.bottomText}>
           <ActionText
             main={subTitle}
-            mainColor={colors.secondary}
+            mainColor={lightColors.secondary}
             mainSize={11}
           />
-          <Ellipse color={colors.secondary}/>
-          <ActionText main={time} mainColor={colors.secondary} mainSize={11} />
+          <Ellipse color={lightColors.secondary}/>
+          <ActionText main={time} mainColor={lightColors.secondary} mainSize={11} />
         </View>
       </View>
     </View>

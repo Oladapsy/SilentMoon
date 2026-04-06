@@ -10,7 +10,7 @@ import { Controller } from "react-hook-form"; // connect custom input to rhf
 import EyeClose from "@/assets/svg/signup/eyeClose.svg";
 import EyeOpen from "@/assets/svg/signup/eyeOpen.svg";
 import CheckIcon from "@/assets/svg/signup/check.svg";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 
 interface InputFieldProps {
   control: any; // from react hook form
@@ -86,23 +86,23 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 0.15,
-    borderColor: colors.secondary,
+    borderColor: lightColors.secondary,
     borderRadius: 15,
     paddingHorizontal: 12,
-    backgroundColor: colors.textInput,
+    backgroundColor: lightColors.textInput,
   },
   input: {
     flex: 1,
     height: 56,
     fontSize: 16,
-    color: colors.secondary,
-    backgroundColor: colors.textInput,
+    color: lightColors.secondary,
+    backgroundColor: lightColors.textInput,
   },
   errorBorder: {
-    borderColor: colors.error,
+    borderColor: lightColors.error,
   },
   errorText: {
-    color: colors.error,
+    color: lightColors.error,
     fontSize: 13,
     marginTop: 2,
   },

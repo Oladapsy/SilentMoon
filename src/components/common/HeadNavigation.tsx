@@ -1,6 +1,6 @@
 import { View, StyleSheet, TouchableOpacity, ViewStyle } from "react-native";
 import React, { ReactNode } from "react";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import Back from "@/assets/svg/back.svg";
 import { router } from "expo-router";
 
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     padding: 15,
     borderWidth: 1,
-    borderColor: colors.navBorder,
+    borderColor: lightColors.navBorder,
     borderRadius: 100,
   },
   icon23: {
@@ -58,19 +58,19 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   icon2: {
-    backgroundColor: colors.sleep,
+    backgroundColor: lightColors.sleep,
     opacity: 0.7,
     padding: 15,
     borderWidth: 1,
-    borderColor: colors.nav23Border,
+    borderColor: lightColors.nav23Border,
     borderRadius: 100,
   },
   icon3: {
-    backgroundColor: colors.sleep,
+    backgroundColor: lightColors.sleep,
     opacity: 0.7,
     padding: 15,
     borderWidth: 1,
-    borderColor: colors.nav23Border,
+    borderColor: lightColors.nav23Border,
     borderRadius: 100,
   },
 });

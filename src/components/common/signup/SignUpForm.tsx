@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import InputField from "@/src/components/common/InputField";
 import MainButton from "@/src/components/common/MainButton";
 import ActionText from "@/src/components/common/ActionText";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import CheckIcon from "@/assets/svg/checkBox.svg";
 //route wehn complete
 import { useRouter } from "expo-router";
@@ -94,17 +94,17 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     borderWidth: 2,
-    borderColor: colors.mainText,
+    borderColor: lightColors.mainText,
     borderRadius: 4,
     justifyContent: "center",
     alignItems: "center",
     marginRight: 8,
   },
   checkboxChecked: {
-    backgroundColor: colors.tetiary,
+    backgroundColor: lightColors.tetiary,
   },
   errorText: {
-    color: colors.error,
+    color: lightColors.error,
     fontSize: 13,
     marginTop: -5,
   },

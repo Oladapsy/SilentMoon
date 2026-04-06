@@ -5,7 +5,7 @@ import MeditateIcon from "@/assets/svg/tabs/meditateTab.svg";
 import MusicIcon from "@/assets/svg/tabs/musicTab.svg";
 import ProfileIcon from "@/assets/svg/tabs/profileTab.svg";
 import SleepIcon from "@/assets/svg/tabs/sleepTab.svg";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import { fontFamily } from "@/src/theme/fontFamily";
 
 export default function TabLayout() {
@@ -14,8 +14,8 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: true,
-        tabBarActiveTintColor: colors.tetiary,
-        tabBarInactiveTintColor: colors.iconInactive,
+        tabBarActiveTintColor: lightColors.tetiary,
+        tabBarInactiveTintColor: lightColors.iconInactive,
         tabBarLabelStyle: {
           fontSize: 13,
           fontFamily: fontFamily.normal,
@@ -41,7 +41,7 @@ export default function TabLayout() {
               <HomeIcon
                 width={22}
                 height={22}
-                color={focused ? "white" : colors.iconInactive}
+                color={focused ? "white" : lightColors.iconInactive}
               />
             </View>
           ),
@@ -58,7 +58,7 @@ export default function TabLayout() {
               <SleepIcon
                 width={22}
                 height={22}
-                color={focused ? "white" : colors.iconInactive}
+                color={focused ? "white" : lightColors.iconInactive}
               />
             </View>
           ),
@@ -75,7 +75,7 @@ export default function TabLayout() {
               <MeditateIcon
                 width={22}
                 height={22}
-                color={focused ? "white" : colors.iconInactive}
+                color={focused ? "white" : lightColors.iconInactive}
               />
             </View>
           ),
@@ -92,7 +92,7 @@ export default function TabLayout() {
               <MusicIcon
                 width={22}
                 height={22}
-                color={focused ? "white" : colors.iconInactive}
+                color={focused ? "white" : lightColors.iconInactive}
               />
             </View>
           ),
@@ -109,7 +109,7 @@ export default function TabLayout() {
               <ProfileIcon
                 width={22}
                 height={22}
-                color={focused ? "white" : colors.iconInactive}
+                color={focused ? "white" : lightColors.iconInactive}
               />
             </View>
           ),
@@ -127,6 +127,6 @@ const styles = StyleSheet.create({
     borderRadius: 18,
   },
   activeIconWrapper: {
-    backgroundColor: colors.tetiary,
+    backgroundColor: lightColors.tetiary,
   },
 });

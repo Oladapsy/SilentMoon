@@ -1,7 +1,7 @@
 import { View, StyleSheet } from "react-native";
 import MySafeAreaView from "@/src/components/common/MySafeAreaView";
 import Hero from "@/src/components/common/home/Hero";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import HomeText from "@/src/components/common/home/HomeText";
 import MainButton from "@/src/components/common/MainButton";
 import ActionText from "@/src/components/common/ActionText";
@@ -9,7 +9,7 @@ import DashLine from "@/src/components/common/BottomDash";
 
 export default function WelcomeScreen() {
   return (
-    <MySafeAreaView color={colors.layer}>
+    <MySafeAreaView color={lightColors.layer}>
       <View style={styles.container}>
         <View style={styles.heroWrapper}>
           <Hero />

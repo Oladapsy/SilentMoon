@@ -30,6 +30,12 @@ export default function RootLayout() {
     "HelveticaNeue-ThinItalic": require("@/assets/fonts/helvetica-neue-5/HelveticaNeueThinItalic.otf"),
     "HelveticaNeue-UltraLight": require("@/assets/fonts/helvetica-neue-5/HelveticaNeueUltraLight.otf"),
     "HelveticaNeue-UltraLightItalic": require("@/assets/fonts/helvetica-neue-5/HelveticaNeueUltraLightItalic.otf"),
+
+    // Garamond Premier Pro Font 
+    "AGaramondPro-Bold": require("@/assets/fonts/adobe-garamond-pro-2/AGaramondPro-Bold.otf"),
+    "AGaramondPro-BoldItalic": require("@/assets/fonts/adobe-garamond-pro-2/AGaramondPro-BoldItalic.otf"),
+    "AGaramondPro-Italic": require("@/assets/fonts/adobe-garamond-pro-2/AGaramondPro-Italic.otf"),
+    "AGaramondPro-Regular": require("@/assets/fonts/adobe-garamond-pro-2/AGaramondPro-Regular.otf"),
   });
 
   if (!fontsLoaded) {

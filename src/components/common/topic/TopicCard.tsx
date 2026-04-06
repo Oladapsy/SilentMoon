@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React, { ReactNode } from "react";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 
 interface TopicCardProps {
   title: string;
@@ -18,7 +18,7 @@ export default function TopicCard({
   color,
   image,
   height = 210,
-  textColor = colors.primary,
+  textColor = lightColors.primary,
   imageMarginVertical,
   textMarginTop,
   onPress,

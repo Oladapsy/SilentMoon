@@ -1,6 +1,6 @@
 import { View, StyleSheet } from "react-native";
 import React from "react";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import MySafeAreaView from "@/src/components/common/MySafeAreaView";
 import SignHero from "@/src/components/common/signIn/SignHero";
 import ActionText from "../components/common/ActionText";
@@ -20,7 +20,7 @@ export default function SignIn() {
           </View>
 
           <View style={styles.fpassword}>
-            <ActionText main="Forgot Password?" mainColor={colors.primary} />
+            <ActionText main="Forgot Password?" mainColor={lightColors.primary} />
           </View>
 
           <View style={styles.actionText}>

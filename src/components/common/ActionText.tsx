@@ -1,11 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, TextProps } from "react-native";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import { Href, Link } from "expo-router";
 
 interface ActionTextProps extends TextProps {
   main: string;
   sub?: string;
+  subColor?: string;
   mainColor?: string;
   route?: Href;
   mainSize?: number;
@@ -23,34 +24,42 @@ interface ActionTextProps extends TextProps {
     | "900";
   fontFamily?: string;
   textAlign?: "auto" | "left" | "right" | "center" | "justify";
-  lineHeight?: number,
+  lineHeight?: number;
 }
 
 export default function ActionText({
   main,
   sub,
-  mainColor = colors.mainText,
+  mainColor = lightColors.mainText,
   route,
   mainSize = 14,
   fontWeight = "400",
   fontFamily = "HelveticaNeue-Bold",
   textAlign,
   lineHeight,
+  subColor = lightColors.tetiary,
 }: ActionTextProps) {
   return (
     <View style={styles.container}>
       <Text
         style={[
           styles.mainText,
-          { color: mainColor, fontSize: mainSize, fontFamily, fontWeight, textAlign, lineHeight },
+          {
+            color: mainColor,
+            fontSize: mainSize,
+            fontFamily,
+            fontWeight,
+            textAlign,
+            lineHeight,
+          },
         ]}
       >
         {main}{" "}
       </Text>
 
       {sub && route && (
-        <Link href={route} asChild>
-          <Text style={styles.subText}>{sub}</Text>
+        <Link href={route} style={[styles.subText, { color: subColor }]}>
+          {sub}
         </Link>
       )}
     </View>
@@ -68,7 +77,7 @@ const styles = StyleSheet.create({
   },
   subText: {
     fontFamily: "HelveticaNeue-Bold",
-    color: colors.tetiary,
+    // color: lightColors.tetiary,
     fontSize: 14,
   },
 });

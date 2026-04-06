@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, TouchableOpacity, StyleSheet } from "react-native";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import { fontFamily } from "@/src/theme/fontFamily";
 
 interface Day {
@@ -24,20 +24,20 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderWidth: 1,
-    borderColor: colors.mainText,
+    borderColor: lightColors.mainText,
     borderRadius: 100,
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
-    color: colors.mainText,
+    color: lightColors.mainText,
     fontSize: 14,
     fontFamily: fontFamily.normal,
   },
   active: {
-    backgroundColor: colors.primary,
+    backgroundColor: lightColors.primary,
   },
   activeText: {
-    color: colors.activeText,
+    color: lightColors.activeText,
   },
 });

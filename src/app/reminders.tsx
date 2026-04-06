@@ -6,7 +6,7 @@ import ReminderText from "@/src/components/common/reminder/ReminderText";
 import { DaySelector } from "@/src/components/common/reminder/DaySelector";
 import MainButton from "@/src/components/common/MainButton";
 import ActionText from "@/src/components/common/ActionText";
-import { colors } from "@/src/theme/colors";
+import { lightColors } from "@/src/theme/colors";
 import { fontFamily } from "@/src/theme/fontFamily";
 
 const DAYS = ["SU", "M", "T", "W", "TH", "F", "S"];
@@ -75,7 +75,7 @@ export default function Reminders() {
           <ActionText
             main="NO THANKS"
             mainSize={14}
-            mainColor={colors.primary}
+            mainColor={lightColors.primary}
             fontFamily={fontFamily.light}
           />
         </View>
