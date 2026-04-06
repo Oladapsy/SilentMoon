@@ -1,5 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import { Tabs } from "expo-router";
+import { Tabs, usePathname } from "expo-router";
 import HomeIcon from "@/assets/svg/tabs/homeTab.svg";
 import MeditateIcon from "@/assets/svg/tabs/meditateTab.svg";
 import MusicIcon from "@/assets/svg/tabs/musicTab.svg";
@@ -8,7 +8,12 @@ import SleepIcon from "@/assets/svg/tabs/sleepTab.svg";
 import { lightColors } from "@/src/theme/colors";
 import { fontFamily } from "@/src/theme/fontFamily";
 
+// DarkMode
+
 export default function TabLayout() {
+  const pathname = usePathname();
+  const isSleep = pathname.startsWith("/sleep");
+
   return (
     <Tabs
       screenOptions={{
@@ -24,7 +29,7 @@ export default function TabLayout() {
         },
         tabBarStyle: {
           height: 100,
-          backgroundColor: "white",
+          backgroundColor: isSleep ? lightColors.sleep : "white",
           paddingTop: 10,
           paddingBottom: 12,
         },
