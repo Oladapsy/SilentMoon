@@ -11,6 +11,7 @@ import MainButton from "@/src/components/common/MainButton";
 export default function SleepWelcome() {
   return (
     <MySafeAreaView>
+      {/* color="#03174C" */}
       <View>
         {/* sleep welcome bg */}
         <View style={styles.bgIcon}>
@@ -87,5 +88,6 @@ const styles = StyleSheet.create({
 
   finalText: {
     marginTop: 60,
+    marginHorizontal: 20,
   },
 });

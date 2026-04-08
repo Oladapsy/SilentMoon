@@ -55,6 +55,7 @@ export default function RootLayout() {
       <Stack.Screen name="musicPlayer" options={{ headerShown: false }} />
       <Stack.Screen name="darkMusicPlayer" options={{ headerShown: false }} />
       <Stack.Screen name="sleepDetail" options={{ headerShown: false }} />
+      <Stack.Screen name="sleepWelcome" options={{headerShown: false}}/>
     </Stack>
   );
 }

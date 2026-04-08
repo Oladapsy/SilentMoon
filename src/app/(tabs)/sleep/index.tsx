@@ -1,5 +1,5 @@
 import { View, StyleSheet } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import MySafeAreaView from "@/src/components/common/MySafeAreaView";
 import WelcomeSleepBgIcon from "@/assets/svg/tabs/sleep/sleep.svg";
 import ActionText from "@/src/components/common/ActionText";
@@ -9,7 +9,20 @@ import MediateFilter from "@/src/components/tabs/meditate/MediateFilter";
 import OceanCard from "@/src/components/tabs/sleep/oceanCard";
 import SleepMusicList from "@/src/components/tabs/sleep/sleepMusicList";
 
+// routing
+import { useRouter } from "expo-router";
+let sleepWelcomeSeen = false;
+
 export default function Sleep() {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!sleepWelcomeSeen) {
+      sleepWelcomeSeen = true;
+      router.replace("/sleepWelcome");
+    }
+  }, []);
+
   return (
     <MySafeAreaView>
       <View style={styles.container}>
